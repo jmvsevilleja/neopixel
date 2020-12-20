@@ -1,5 +1,9 @@
 from machine import Pin
 from neopixel import NeoPixel
+from all.functions import clear
+
+# clear
+clear(32)
 
 pin = Pin(4, Pin.OUT)   # set GPIO0 to output to drive NeoPixels
 np = NeoPixel(pin, 3)   # create NeoPixel driver on GPIO0 for 3 pixels

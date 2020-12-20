@@ -5,6 +5,10 @@
 from machine import Pin
 from neopixel import NeoPixel
 import time
+from all.functions import clear
+
+# clear
+clear(32)
 
 pin = 4 # pin digital out
 n = 32 # number of leds
@@ -18,4 +22,4 @@ def cycle(r, g, b, wait):
       np.write()
       time.sleep_ms(wait)
 
-cycle(10,10,10,10)
+cycle(10,10,10,100)

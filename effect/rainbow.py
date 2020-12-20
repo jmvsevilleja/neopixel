@@ -5,9 +5,13 @@
 from machine import Pin
 from neopixel import NeoPixel
 import time
+from all.functions import clear
+
+# clear
+clear(32)
 
 pin = 4 # pin digital out
-n = 32 # number of leds
+n = 10 # number of leds
 np = NeoPixel(Pin(pin,Pin.OUT), n)
 
 def wheel(pos):
@@ -30,3 +34,5 @@ def rainbow_cycle(wait):
       np[i] = wheel(rc_index & 255)
     np.write()
     time.sleep_ms(wait)
+
+rainbow_cycle(1000)

@@ -5,6 +5,10 @@
 from machine import Pin
 from neopixel import NeoPixel
 import time
+from all.functions import clear
+
+# clear
+clear(32)
 
 pin = 4 # pin digital out
 n = 32 # number of leds
@@ -22,4 +26,4 @@ def bounce(r, g, b, wait):
         time.sleep_ms(wait)
 
 
-bounce(10,10,10,10)
+bounce(1,1,1,10)
